@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-image: url('https://e0.pxfuel.com/wallpapers/328/845/desktop-wallpaper-s-awareness-ally-mental-health-awareness.jpg');background-size:cover;padding-left: 300px;">
+    <form method="POST" accept-charset="UTF-8" action="/predict">
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>AGE</label>
+                <input type="text" id="age" name="age">
+            </div>
+            <div class="col-md-6 form-control">
+                <form action="/action_page.php">
+                <br>
+                <label for="gender">GENDER</label>
+                <select id="gender" name="gender">
+                    <option value="0">F</option>
+                    <option value="1">M</option>
+                </select>
+                <br><br>
+                <label for="smoking">SMOKING</label>
+                <select id="smoking" name="smoking">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="yellowfingers">YELLOW FINGERS</label>
+                <select id="yellowfingers" name="yellowfingers">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="anxiety">ANXIETY</label>
+                <select id="anxiety" name="anxiety">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="peerpressure">PEER-PRESSURE</label>
+                <select id="peerpressure" name="peerpressure">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="fatigue">FATIGUE</label>
+                <select id="fatigue" name="fatigue">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="chronicdisease">CHRONIC DISEASE</label>
+                <select id="chronicdisease" name="chronicdisease">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="allergy">ALLERGY</label>
+                <select id="allergy" name="allergy">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="wheezing">WHEEZING</label>
+                <select id="wheezing" name="wheezing">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="alcoholconsuming">ALCOHOL CONSUMING</label>
+                <select id="alcoholconsuming" name="alcoholconsuming">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="coughing">COUGHING</label>
+                <select id="coughing" name="coughing">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="shortnessofbreath">SHORTNESS OF BREATH</label>
+                <select id="shortnessofbreath" name="shortnessofbreath">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="swallowingdifficulty">SWALLOWING DIFFICULTY</label>
+                <select id="swallowingdifficulty" name="swallowingdifficulty">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                <br><br>
+                <label for="chestpain">CHEST PAIN</label>
+                <select id="chestpain" name="chestpain">
+                    <option value="0">1</option>
+                    <option value="1">2</option>
+                </select>
+                </form>
+            </div>
+            <div class="col-md-12 form-control">
+                <input type="submit" class="btn-info" value="predict">
+            </div>
+        </div>
+    </form>
+    {% if predict %}
+        <p>The Predicted Value is : {{predict}} </p>
+    {% endif %}
+</body>
+</html>
